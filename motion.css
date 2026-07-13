@@ -1,0 +1,3 @@
+/* Pieces remain mounted while you choose a move; only the moved piece animates. */
+.piece { animation: none; }
+.piece.moved { animation: pieceIn .22s cubic-bezier(.2,.9,.25,1.25); }

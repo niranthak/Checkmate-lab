@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Checkmate Lab — Impossible Chess</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="grain"></div>
+  <header class="topbar">
+    <a class="brand" href="#"><span class="brand-mark">♞</span>checkmate<span>lab</span></a>
+    <nav><a class="active" href="#play">Play</a><a href="#about">The Experiment</a></nav>
+    <button class="profile" aria-label="Profile">S</button>
+  </header>
+
+  <main>
+    <section class="hero" id="play">
+      <div class="eyebrow"><i></i> A VERY SERIOUS CHESS EXPERIMENT</div>
+      <h1>Choose your<br><em>impossibility.</em></h1>
+      <p>Two bots. Two broken promises. Can you make the impossible happen?</p>
+    </section>
+
+    <section class="arena">
+      <aside class="bot-panel" id="botPanel">
+        <div class="panel-label">SELECT OPPONENT</div>
+        <button class="bot-card selected" data-bot="atlas">
+          <span class="bot-avatar atlas">A</span><sp..an class="bot-copy"><b>ATLAS</b><small>THE UNBEATABLE</small></span><span class="rating">∞</span>
+          <span class="bot-desc">
+                Doesn't lose. Doesn't blink.<br>Doesn't accept your excuses.</span>
+        </button>
+        <button class="bot-card" data-bot="milo">
+          <span class="bot-avatar milo">M</span><span class="bot-copy"><b>MILO</b><small>THE GRACIOUS LOSER</small></span><span class="rating">001</span>
+          <span class="bot-desc">Will find a way to lose.<br>Even when winning.</span>
+        </button>
+        <div class="legend"><span class="dot"></span> LIVE EXPERIMENT <b>02</b> BOTS ONLINE</div>
+      </aside>
+
+      <div class="game-shell">
+        <div class="player-row top-player"><div class="mini-avatar atlas" id="opponentAvatar">A</div><div><b id="opponentName">ATLAS</b><small id="opponentTitle">THE UNBEATABLE · RATING ∞</small></div><div class="clock">10:00</div></div>
+        <div class="board-wrap"><div class="board" id="board" aria-label="Chess board"></div><div class="game-over" id="gameOver"></div></div>
+        <div class="player-row"><div class="mini-avatar you">S</div><div><b>YOU</b><small>CHALLENGER · RATING ???</small></div><div class="clock active-clock" id="clock">10:00</div></div>
+      </div>
+
+      <aside class="match-panel">
+        <div class="panel-label">MATCH STATUS</div>
+        <div class="status"><span class="pulse"></span><span id="statusText">YOUR MOVE</span><b id="moveCount">01</b></div>
+        <div class="notation-title">MOVE HISTORY <button id="newGame">↻ NEW GAME</button></div>
+        <ol class="moves" id="moves"><li><span>1.</span><em>—</em></li></ol>
+        <div class="bot-thought" id="botThought"><span>ATLAS IS WAITING</span><p>"I have already calculated every possible move you could make. This should be fun."</p></div>
+        <div class="help">Click a piece, then click its destination.<br>Take the king to win the experiment.</div>
+      </aside>
+    </section>
+  </main>
+  <section class="about" id="about"><span>THE RULES ARE SIMPLE</span><h2>One bot guards its crown.<br>The other gives away theirs.</h2></section>
+  <script src="app.js"></script>
+</body>
+</html>
